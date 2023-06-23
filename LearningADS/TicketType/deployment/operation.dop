@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="TicketType">
+  <name>TicketType</name>
+  <uuid>719494f4-9e5b-435d-a9a3-bdc753cd75dd</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#54c89cd1-f520-49d8-b76d-acf463eb6177"/>
+  <targetRuleProject href="../../TicketType#fa149fe6-770a-445e-b2e6-d91c133dce2b"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["TicketType"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

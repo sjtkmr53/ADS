@@ -1,0 +1,13 @@
+{
+  "vendorInformation": {
+    "vendorEmail": "bags@gmail.com",
+    "vendorName": "bags",
+    "vendorPhoneNumber": "+244 567 9803"
+  },
+  "invoiceDetail": {
+    "invoiceDate": "2022-11-19",
+    "invoiceNumber": "1234",
+    "invoiceTotal": "234"
+  },
+  "today": "2022-11-18"
+}

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>remediation</name>
+  <uuid>6878fe76-5874-4748-abcc-dbc977dd8185</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['itemtype' is <a string>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set 'decision' to <a string>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["createactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id has already available in salesforce and it is in active state in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["deactivateinactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id has already in deactivated state in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["deactivatenotexist"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id has not available to marked as deactivate him/his in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["deactivateactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"POST\", \"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/invoke/1560/5589\",\"rest_payload\":{\"isActive\":false},\"payload_update\":\"deactive\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["createinactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"POST\", \"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/invoke/1560/5589\",\"rest_payload\":{\"isActive\":true},\"payload_update\":\"recreate\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["createnotexist"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"POST\", \"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/invoke/1559/5589 \",\"rest_payload\":\"create\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["pwdresetactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"POST\", \"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/invoke/1561/5589\",\"rest_payload\":\"pwdreset\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[" pwdresetinactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id is in deactivated state in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["pwdresetnotexist"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id has not available to reset password in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["profileactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"POST\", \"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/invoke/1562/5589\",\"rest_payload\":\"profile\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["profileinactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id is in deactivated state to update the profile in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["profilenotexist"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id has not available to reset password in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["roleactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"POST\", \"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/invoke/1563/5589\",\"rest_payload\":\"role\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["roleinactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id is in deactivated state to update the role in salesforce .\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["rolenotexist"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id has not available to update role in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[" mobileactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"POST\", \"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/invoke/1560/5589\",\"rest_payload\":\"mobile\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[" mobileinactive"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id is in deactivated state to update mobile number in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["role"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id has not available to update mobile number in salesforce.\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["role"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["{\"rest_method\":\"PUT\", \"comment\":\"Dear Requestor, The requested user id is in deactivated state to update the role in salesforce .\",\"rest_url\":\"http://sfchart-services-adapter.dw-sf-dev/api/v1/adapter/update/1528/5589\"}"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[itemtype]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

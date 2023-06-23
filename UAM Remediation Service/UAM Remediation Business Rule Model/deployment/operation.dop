@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="UAM Remediation Business Rule Model">
+  <name>UAM-Remediation-Business-Rule-Model</name>
+  <uuid>d229b970-5c45-4024-b596-e557ed324bd8</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#af6aaaea-93bd-4dc1-8f0f-51966fbf2abc"/>
+  <targetRuleProject href="../../UAM%20Remediation%20Business%20Rule%20Model#1f076f92-baa5-4ad2-89f2-85dc9c1e50c7"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["SF-Remediation"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

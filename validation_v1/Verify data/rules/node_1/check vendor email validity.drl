@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>check vendor email validity</name>
+  <uuid>f5a62bd2-53fb-4b78-8a14-686b09f943f6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if the vendor email of 'Vendor information' is not empty and	
+	the vendor email of 'Vendor information' does not contain "@"
+    or the vendor email of 'Vendor information' does not contain "."
+then
+	add "Invalid Vendor Email" to the msgs of decision ;
+    add false to the outputs of decision ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

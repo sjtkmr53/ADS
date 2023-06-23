@@ -1,0 +1,6 @@
+
+# Ticketdetails
+Ticketdetails#concept.documentation = 
+Ticketdetails#concept.label = ticketdetails
+Ticketdetails.item_type#instance.label = item_type
+Ticketdetails.userState#instance.label = userState

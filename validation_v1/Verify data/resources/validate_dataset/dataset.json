@@ -1,0 +1,13 @@
+{
+  "vendorInformation": {
+    "vendorEmail": "teamelectronic@superrito.com",
+    "vendorName": "Vendor",
+    "vendorPhoneNumber": "09349-94934"
+  },
+  "invoiceDetail": {
+    "invoiceDate": "2022-08-04",
+    "invoiceNumber": "INV201",
+    "invoiceTotal": "45"
+  },
+  "today": "2022-11-18"
+}

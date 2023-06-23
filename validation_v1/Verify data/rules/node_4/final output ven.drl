@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>final output ven</name>
+  <uuid>19959965-7e77-4fff-9b83-c563f8171d2e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set m2 to a string in the msgs of 'Check vendor information' ;
+
+if there is at least one boolean in the outputs of 'Check vendor information' 
+   where this boolean is false ,
+then
+	decision does not get extractionSuccess ; 
+    add m2 to the messages of decision ; 
+    
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

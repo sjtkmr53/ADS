@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>final output inv</name>
+  <uuid>c05b1ea2-f55a-4a3e-8d05-c998c315af2d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set m1 to a string in the msgs of 'Check invoice details' ;
+
+if there is at least one boolean in the outputs of 'Check invoice details' 
+   where this boolean is false ,
+then
+	decision does not get extractionSuccess ; 
+    add m1 to the messages of decision ; 
+    
+
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>inv date check</name>
+  <uuid>67589f28-7de7-47f9-8ee5-950c9b3ee163</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the invoice date of 'Invoice detail' is null 
+then 
+    add "Invoice date missing" to the msgs of decision ;
+    add false to the outputs of decision ;
+    
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

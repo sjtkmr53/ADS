@@ -1,0 +1,201 @@
+
+
+public class FinalAnswer
+        property "ads.typeId" "7"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "finalAnswer"
+        property "de.generated" "true"
+{
+    public boolean extractionSuccess
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "extractionSuccess"
+                property update "true";
+    public java.util.List messages domain 0,* class string
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "messages"
+                property update "true";
+    public FinalAnswer(boolean extractionSuccess, 
+        java.util.List messages domain 0,* class string)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public FinalAnswer()
+                property "dataio.default" "true";
+    public void addTo_messages(string messages)
+                property collectionAttribute "messages"
+                property update "true";
+    public void clear_messages()
+                property collectionAttribute "messages"
+                property update "true";
+    public void removeFrom_messages(string messages)
+                property collectionAttribute "messages"
+                property update "true";
+    public void set_messages(java.util.Collection messages domain 0,* class string)
+                property collectionAttribute "messages"
+                property update "true";
+}
+
+public class InvoiceDetail
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "invoiceDetail"
+        property "de.generated" "true"
+{
+    public ilog.rules.brl.SimpleDate invoiceDate
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "invoiceDate"
+                property update "true";
+    public string invoiceNumber
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "invoiceNumber"
+                property update "true";
+    public string invoiceTotal
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "invoiceTotal"
+                property update "true";
+    public InvoiceDetail(ilog.rules.brl.SimpleDate invoiceDate, string invoiceNumber, string invoiceTotal)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public InvoiceDetail()
+                property "dataio.default" "true";
+}
+
+public class InvoiceOutput
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "invoiceOutput"
+        property "de.generated" "true"
+{
+    public java.util.List msgs domain 0,* class string
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "msgs"
+                property update "true";
+    public java.util.List outputs domain 0,* class boolean
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "outputs"
+                property update "true";
+    public InvoiceOutput(java.util.List msgs domain 0,* class string, 
+        java.util.List outputs domain 0,* class boolean)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public InvoiceOutput()
+                property "dataio.default" "true";
+    public void addTo_msgs(string msgs)
+                property collectionAttribute "msgs"
+                property update "true";
+    public void addTo_outputs(boolean outputs)
+                property collectionAttribute "outputs"
+                property update "true";
+    public void clear_msgs()
+                property collectionAttribute "msgs"
+                property update "true";
+    public void clear_outputs()
+                property collectionAttribute "outputs"
+                property update "true";
+    public void removeFrom_msgs(string msgs)
+                property collectionAttribute "msgs"
+                property update "true";
+    public void removeFrom_outputs(boolean outputs)
+                property collectionAttribute "outputs"
+                property update "true";
+    public void set_msgs(java.util.Collection msgs domain 0,* class string)
+                property collectionAttribute "msgs"
+                property update "true";
+    public void set_outputs(java.util.Collection outputs domain 0,* class boolean)
+                property collectionAttribute "outputs"
+                property update "true";
+}
+
+public class Today
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "today"
+        property "de.generated" "true"
+{
+    public ilog.rules.brl.SimpleDate date
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "date"
+                property update "true";
+    public Today(ilog.rules.brl.SimpleDate date)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Today()
+                property "dataio.default" "true";
+}
+
+public class VendorInformation
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "vendorInformation"
+        property "de.generated" "true"
+{
+    public string vendorEmail
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "vendorEmail"
+                property update "true";
+    public string vendorName
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "vendorName"
+                property update "true";
+    public string vendorPhoneNumber
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "vendorPhoneNumber"
+                property update "true";
+    public VendorInformation(string vendorEmail, string vendorName, string vendorPhoneNumber)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public VendorInformation()
+                property "dataio.default" "true";
+}
+
+public class VendorOutput
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "vendorOutput"
+        property "de.generated" "true"
+{
+    public java.util.List msgs domain 0,* class string
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "msgs"
+                property update "true";
+    public java.util.List outputs domain 0,* class boolean
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "outputs"
+                property update "true";
+    public VendorOutput(java.util.List msgs domain 0,* class string, 
+        java.util.List outputs domain 0,* class boolean)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public VendorOutput()
+                property "dataio.default" "true";
+    public void addTo_msgs(string msgs)
+                property collectionAttribute "msgs"
+                property update "true";
+    public void addTo_outputs(boolean outputs)
+                property collectionAttribute "outputs"
+                property update "true";
+    public void clear_msgs()
+                property collectionAttribute "msgs"
+                property update "true";
+    public void clear_outputs()
+                property collectionAttribute "outputs"
+                property update "true";
+    public void removeFrom_msgs(string msgs)
+                property collectionAttribute "msgs"
+                property update "true";
+    public void removeFrom_outputs(boolean outputs)
+                property collectionAttribute "outputs"
+                property update "true";
+    public void set_msgs(java.util.Collection msgs domain 0,* class string)
+                property collectionAttribute "msgs"
+                property update "true";
+    public void set_outputs(java.util.Collection outputs domain 0,* class boolean)
+                property collectionAttribute "outputs"
+                property update "true";
+}
+
