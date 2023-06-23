@@ -1,13 +1,16 @@
 {
-  "vendorInformation": {
-    "vendorEmail": "bags@gmail.com",
-    "vendorName": "bags",
-    "vendorPhoneNumber": "+244 567 9803"
-  },
-  "invoiceDetail": {
-    "invoiceDate": "2022-11-19",
-    "invoiceNumber": "1234",
-    "invoiceTotal": "234"
-  },
-  "today": "2022-11-18"
+  "operationId" : "2ad89757-08e1-4112-8ab4-f77fa6117587",
+  "body" : {
+    "vendorInformation" : {
+      "vendorEmail" : "bags@gmail.com",
+      "vendorName" : "bags",
+      "vendorPhoneNumber" : "+244 567 9803"
+    },
+    "invoiceDetail" : {
+      "invoiceDate" : "2022-11-19",
+      "invoiceNumber" : "1234",
+      "invoiceTotal" : "234"
+    },
+    "today" : "2022-11-18"
+  }
 }

@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cp4admin.invoice_processor_business_logic.uam_remediation_service</groupId>
+        <groupId>cp4admin.sjt_invoice_process.uam_remediation_service</groupId>
         <artifactId>UAMRemediationService</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -20,6 +20,12 @@
             <groupId>com.ibm.decision</groupId>
             <artifactId>engine-compact-runtime</artifactId>
             <version>${engine-compact-runtime.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.decision</groupId>
+            <artifactId>engine-de-api</artifactId>
+            <version>${engine-api.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -42,6 +48,44 @@
 
 
 
+
+<profiles>
+        <profile>
+            <id>include-libs</id>
+            <activation>
+                <file>
+                    <exists>lib</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>${maven-antrun-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>unpack-libs</id>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <target>
+                                        <unzip dest="${project.build.directory}/classes">
+                                            <fileset dir="${project.basedir}/lib">
+                                                <filename regex=".*.jar$"/>
+                                            </fileset>
+                                        </unzip>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 <build>
         <resources>
             <resource>
@@ -99,6 +143,11 @@
                                     <resource>META-INF/decision-providers</resource>
                                 </transformer>
                             </transformers>
+                            <artifactSet>
+                                <excludes>
+                                    <exclude>com.ibm.decision:engine-de-api</exclude>
+                                </excludes>
+                            </artifactSet>
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>

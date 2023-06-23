@@ -1,4 +1,6 @@
 
+package cp4admin.sample.learningads.ticketdetails;
+
 
 public class Ticketdetails
         extends java.lang.Enum
@@ -7,10 +9,10 @@ public class Ticketdetails
         property "de.generated" "true"
 {
     domain {static item_type, static userState}
-    public static final readonly Ticketdetails item_type
+    public static final readonly cp4admin.sample.learningads.ticketdetails.Ticketdetails item_type
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "item_type";
-    public static final readonly Ticketdetails userState
+    public static final readonly cp4admin.sample.learningads.ticketdetails.Ticketdetails userState
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "userState";
 }

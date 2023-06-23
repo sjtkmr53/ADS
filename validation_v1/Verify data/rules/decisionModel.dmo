@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
   <name>decisionModel</name>
   <uuid>95afd3f3-985a-4bd4-a3c2-dbfb1fdedb7e</uuid>
   <locale>en_US</locale>
-  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+  <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
     <extensionElements>
         <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
     </extensionElements>
     <inputData id="node_0" name="Vendor information">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="VendorInformation" collection="false" name="Vendor information"/>
+                <output bomType="cp4admin.ads_valid.validation_v1.data.VendorInformation" collection="false" name="Vendor information"/>
             </initialization>
         </extensionElements>
-        <variable id="node_0_ii" name="Vendor information" typeRef="VendorInformation"/>
+        <variable id="node_0_ii" name="Vendor information" typeRef="cp4admin.ads_valid.validation_v1.data.VendorInformation"/>
     </inputData>
     <decision id="node_1" name="Check vendor information">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="VendorInformation" collection="false" name="Vendor information"/>
-                <output bomType="VendorOutput" collection="false" name="Check vendor information"/>
+                <input bomType="cp4admin.ads_valid.validation_v1.data.VendorInformation" collection="false" name="Vendor information"/>
+                <output bomType="cp4admin.ads_valid.validation_v1.data.VendorOutput" collection="false" name="Check vendor information"/>
                 <rule defaultRule="false" href="node_1/check%20vendor%20name.drl" kind="BusinessRule" name="check vendor name"/>
                 <rule defaultRule="false" href="node_1/check%20vendor%20email.drl" kind="BusinessRule" name="check vendor email"/>
                 <rule defaultRule="false" href="node_1/check%20vendor%20email%20validity.drl" kind="BusinessRule" name="check vendor email validity"/>
@@ -27,7 +27,7 @@
                 <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Check vendor information" typeRef="VendorOutput"/>
+        <variable id="node_1_ii" name="Check vendor information" typeRef="cp4admin.ads_valid.validation_v1.data.VendorOutput"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
@@ -35,17 +35,17 @@
     <inputData id="node_2" name="Invoice detail">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="InvoiceDetail" collection="false" name="Invoice detail"/>
+                <output bomType="cp4admin.ads_valid.validation_v1.data.InvoiceDetail" collection="false" name="Invoice detail"/>
             </initialization>
         </extensionElements>
-        <variable id="node_2_ii" name="Invoice detail" typeRef="InvoiceDetail"/>
+        <variable id="node_2_ii" name="Invoice detail" typeRef="cp4admin.ads_valid.validation_v1.data.InvoiceDetail"/>
     </inputData>
     <decision id="node_3" name="Check invoice details">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="InvoiceDetail" collection="false" name="Invoice detail"/>
+                <input bomType="cp4admin.ads_valid.validation_v1.data.InvoiceDetail" collection="false" name="Invoice detail"/>
                 <input bomType="ilog.rules.brl.SimpleDate" collection="false" name="Today"/>
-                <output bomType="InvoiceOutput" collection="false" name="Check invoice details"/>
+                <output bomType="cp4admin.ads_valid.validation_v1.data.InvoiceOutput" collection="false" name="Check invoice details"/>
                 <rule defaultRule="false" href="node_3/inv%20date%20check.drl" kind="BusinessRule" name="inv date check"/>
                 <rule defaultRule="false" href="node_3/check%20inv%20date%20validity.drl" kind="BusinessRule" name="check inv date validity"/>
                 <rule defaultRule="false" href="node_3/inv%20number%20check.drl" kind="BusinessRule" name="inv number check"/>
@@ -53,7 +53,7 @@
                 <rule defaultRule="true" href="node_3/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_3_ii" name="Check invoice details" typeRef="InvoiceOutput"/>
+        <variable id="node_3_ii" name="Check invoice details" typeRef="cp4admin.ads_valid.validation_v1.data.InvoiceOutput"/>
         <informationRequirement>
             <requiredInput href="#node_2"/>
         </informationRequirement>
@@ -64,15 +64,15 @@
     <decision id="node_4" name="Validation">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="VendorOutput" collection="false" name="Check vendor information"/>
-                <input bomType="InvoiceOutput" collection="false" name="Check invoice details"/>
-                <output bomType="FinalAnswer" collection="false" name="Validation"/>
+                <input bomType="cp4admin.ads_valid.validation_v1.data.VendorOutput" collection="false" name="Check vendor information"/>
+                <input bomType="cp4admin.ads_valid.validation_v1.data.InvoiceOutput" collection="false" name="Check invoice details"/>
+                <output bomType="cp4admin.ads_valid.validation_v1.data.FinalAnswer" collection="false" name="Validation"/>
                 <rule defaultRule="false" href="node_4/final%20output%20inv.drl" kind="BusinessRule" name="final output inv"/>
                 <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
                 <rule defaultRule="false" href="node_4/final%20output%20ven.drl" kind="BusinessRule" name="final output ven"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_4_ii" name="Validation" typeRef="FinalAnswer"/>
+        <variable id="node_4_ii" name="Validation" typeRef="cp4admin.ads_valid.validation_v1.data.FinalAnswer"/>
         <informationRequirement>
             <requiredInput href="#node_1"/>
         </informationRequirement>
@@ -88,5 +88,6 @@
         </extensionElements>
         <variable id="node_5_ii" name="Today" typeRef="ilog.rules.brl.SimpleDate"/>
     </inputData>
-</definitions></definition>
+</definitions>
+    </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

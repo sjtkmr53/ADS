@@ -1,6 +1,6 @@
 
-# Ticketdetails
-Ticketdetails#concept.documentation = 
-Ticketdetails#concept.label = ticketdetails
-Ticketdetails.item_type#instance.label = item_type
-Ticketdetails.userState#instance.label = userState
+# cp4admin.sample.learningads.ticketdetails.Ticketdetails
+cp4admin.sample.learningads.ticketdetails.Ticketdetails#concept.documentation = 
+cp4admin.sample.learningads.ticketdetails.Ticketdetails#concept.label = ticketdetails
+cp4admin.sample.learningads.ticketdetails.Ticketdetails.item_type#instance.label = item_type
+cp4admin.sample.learningads.ticketdetails.Ticketdetails.userState#instance.label = userState
