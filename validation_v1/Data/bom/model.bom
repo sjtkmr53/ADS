@@ -1,4 +1,6 @@
 
+package cp4admin.ads_valid.validation_v1.data;
+
 
 public class FinalAnswer
         property "ads.typeId" "7"

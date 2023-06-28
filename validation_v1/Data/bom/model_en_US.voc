@@ -1,72 +1,72 @@
 
-# FinalAnswer
-FinalAnswer#concept.label = final answer
-FinalAnswer.FinalAnswer(boolean,java.util.List)#phrase.navigation = a new {final answer} where {0, extractionSuccess} {1, message}
-FinalAnswer.addTo_messages(java.lang.String)#phrase.action = add {0} to the messages of {this}
-FinalAnswer.clear_messages()#phrase.action = clear the messages of {this}
-FinalAnswer.extractionSuccess#phrase.action[0] = {this} gets extractionSuccess only if {extractionSuccess}
-FinalAnswer.extractionSuccess#phrase.action[1] = make it {extractionSuccess} that {this} is extractionSuccess
-FinalAnswer.extractionSuccess#phrase.action[1].deprecated = true
-FinalAnswer.extractionSuccess#phrase.navigation = {this} is extractionSuccess
-FinalAnswer.extractionSuccess#phrase.negative_predicate = {this} is not extractionSuccess
-FinalAnswer.extractionSuccess#phrase.negative_predicate_setter = {this} does not get extractionSuccess
-FinalAnswer.extractionSuccess#phrase.positive_predicate_setter = {this} gets extractionSuccess
-FinalAnswer.messages#phrase.action = set the messages of {this} to {message}
-FinalAnswer.messages#phrase.action.documentation = 
-FinalAnswer.messages#phrase.navigation = {message} of {this}
-FinalAnswer.messages#phrase.navigation.documentation = 
-FinalAnswer.removeFrom_messages(java.lang.String)#phrase.action = remove {0} from the messages of {this}
+# cp4admin.ads_valid.validation_v1.data.FinalAnswer
+cp4admin.ads_valid.validation_v1.data.FinalAnswer#concept.label = final answer
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.FinalAnswer(boolean,java.util.List)#phrase.navigation = a new {final answer} where {0, extractionSuccess} {1, message}
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.addTo_messages(java.lang.String)#phrase.action = add {0} to the messages of {this}
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.clear_messages()#phrase.action = clear the messages of {this}
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.extractionSuccess#phrase.action[0] = {this} gets extractionSuccess only if {extractionSuccess}
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.extractionSuccess#phrase.action[1] = make it {extractionSuccess} that {this} is extractionSuccess
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.extractionSuccess#phrase.action[1].deprecated = true
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.extractionSuccess#phrase.navigation = {this} is extractionSuccess
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.extractionSuccess#phrase.negative_predicate = {this} is not extractionSuccess
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.extractionSuccess#phrase.negative_predicate_setter = {this} does not get extractionSuccess
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.extractionSuccess#phrase.positive_predicate_setter = {this} gets extractionSuccess
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.messages#phrase.action = set the messages of {this} to {message}
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.messages#phrase.action.documentation = 
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.messages#phrase.navigation = {message} of {this}
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.messages#phrase.navigation.documentation = 
+cp4admin.ads_valid.validation_v1.data.FinalAnswer.removeFrom_messages(java.lang.String)#phrase.action = remove {0} from the messages of {this}
 
-# InvoiceDetail
-InvoiceDetail#concept.label = invoice detail
-InvoiceDetail.InvoiceDetail(ilog.rules.brl.SimpleDate,java.lang.String,java.lang.String)#phrase.navigation = a new {invoice detail} where {0, invoice date} {1, invoice number} {2, invoice total}
-InvoiceDetail.invoiceDate#phrase.action = set the invoice date of {this} to {invoice date}
-InvoiceDetail.invoiceDate#phrase.navigation = {invoice date} of {this}
-InvoiceDetail.invoiceNumber#phrase.action = set the invoice number of {this} to {invoice number}
-InvoiceDetail.invoiceNumber#phrase.navigation = {invoice number} of {this}
-InvoiceDetail.invoiceTotal#phrase.action = set the invoice total of {this} to {invoice total}
-InvoiceDetail.invoiceTotal#phrase.navigation = {invoice total} of {this}
+# cp4admin.ads_valid.validation_v1.data.InvoiceDetail
+cp4admin.ads_valid.validation_v1.data.InvoiceDetail#concept.label = invoice detail
+cp4admin.ads_valid.validation_v1.data.InvoiceDetail.InvoiceDetail(ilog.rules.brl.SimpleDate,java.lang.String,java.lang.String)#phrase.navigation = a new {invoice detail} where {0, invoice date} {1, invoice number} {2, invoice total}
+cp4admin.ads_valid.validation_v1.data.InvoiceDetail.invoiceDate#phrase.action = set the invoice date of {this} to {invoice date}
+cp4admin.ads_valid.validation_v1.data.InvoiceDetail.invoiceDate#phrase.navigation = {invoice date} of {this}
+cp4admin.ads_valid.validation_v1.data.InvoiceDetail.invoiceNumber#phrase.action = set the invoice number of {this} to {invoice number}
+cp4admin.ads_valid.validation_v1.data.InvoiceDetail.invoiceNumber#phrase.navigation = {invoice number} of {this}
+cp4admin.ads_valid.validation_v1.data.InvoiceDetail.invoiceTotal#phrase.action = set the invoice total of {this} to {invoice total}
+cp4admin.ads_valid.validation_v1.data.InvoiceDetail.invoiceTotal#phrase.navigation = {invoice total} of {this}
 
-# InvoiceOutput
-InvoiceOutput#concept.label = invoice output
-InvoiceOutput.InvoiceOutput(java.util.List,java.util.List)#phrase.navigation = a new {invoice output} where {0, msg} {1, output}
-InvoiceOutput.addTo_msgs(java.lang.String)#phrase.action = add {0} to the msgs of {this}
-InvoiceOutput.addTo_outputs(boolean)#phrase.action = add {0} to the outputs of {this}
-InvoiceOutput.clear_msgs()#phrase.action = clear the msgs of {this}
-InvoiceOutput.clear_outputs()#phrase.action = clear the outputs of {this}
-InvoiceOutput.msgs#phrase.action = set the msgs of {this} to {msg}
-InvoiceOutput.msgs#phrase.navigation = {msg} of {this}
-InvoiceOutput.outputs#phrase.action = set the outputs of {this} to {output}
-InvoiceOutput.outputs#phrase.navigation = {output} of {this}
-InvoiceOutput.removeFrom_msgs(java.lang.String)#phrase.action = remove {0} from the msgs of {this}
-InvoiceOutput.removeFrom_outputs(boolean)#phrase.action = remove {0} from the outputs of {this}
+# cp4admin.ads_valid.validation_v1.data.InvoiceOutput
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput#concept.label = invoice output
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.InvoiceOutput(java.util.List,java.util.List)#phrase.navigation = a new {invoice output} where {0, msg} {1, output}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.addTo_msgs(java.lang.String)#phrase.action = add {0} to the msgs of {this}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.addTo_outputs(boolean)#phrase.action = add {0} to the outputs of {this}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.clear_msgs()#phrase.action = clear the msgs of {this}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.clear_outputs()#phrase.action = clear the outputs of {this}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.msgs#phrase.action = set the msgs of {this} to {msg}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.msgs#phrase.navigation = {msg} of {this}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.outputs#phrase.action = set the outputs of {this} to {output}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.outputs#phrase.navigation = {output} of {this}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.removeFrom_msgs(java.lang.String)#phrase.action = remove {0} from the msgs of {this}
+cp4admin.ads_valid.validation_v1.data.InvoiceOutput.removeFrom_outputs(boolean)#phrase.action = remove {0} from the outputs of {this}
 
-# Today
-Today#concept.label = today
-Today.Today(ilog.rules.brl.SimpleDate)#phrase.navigation = a new {today} where {0, date}
-Today.date#phrase.action = set the date of {this} to {date}
-Today.date#phrase.navigation = {date} of {this}
+# cp4admin.ads_valid.validation_v1.data.Today
+cp4admin.ads_valid.validation_v1.data.Today#concept.label = today
+cp4admin.ads_valid.validation_v1.data.Today.Today(ilog.rules.brl.SimpleDate)#phrase.navigation = a new {today} where {0, date}
+cp4admin.ads_valid.validation_v1.data.Today.date#phrase.action = set the date of {this} to {date}
+cp4admin.ads_valid.validation_v1.data.Today.date#phrase.navigation = {date} of {this}
 
-# VendorInformation
-VendorInformation#concept.label = vendor information
-VendorInformation.VendorInformation(java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {vendor information} where {0, vendor email} {1, vendor name} {2, vendor phone number}
-VendorInformation.vendorEmail#phrase.action = set the vendor email of {this} to {vendor email}
-VendorInformation.vendorEmail#phrase.navigation = {vendor email} of {this}
-VendorInformation.vendorName#phrase.action = set the vendor name of {this} to {vendor name}
-VendorInformation.vendorName#phrase.navigation = {vendor name} of {this}
-VendorInformation.vendorPhoneNumber#phrase.action = set the vendor phone number of {this} to {vendor phone number}
-VendorInformation.vendorPhoneNumber#phrase.navigation = {vendor phone number} of {this}
+# cp4admin.ads_valid.validation_v1.data.VendorInformation
+cp4admin.ads_valid.validation_v1.data.VendorInformation#concept.label = vendor information
+cp4admin.ads_valid.validation_v1.data.VendorInformation.VendorInformation(java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {vendor information} where {0, vendor email} {1, vendor name} {2, vendor phone number}
+cp4admin.ads_valid.validation_v1.data.VendorInformation.vendorEmail#phrase.action = set the vendor email of {this} to {vendor email}
+cp4admin.ads_valid.validation_v1.data.VendorInformation.vendorEmail#phrase.navigation = {vendor email} of {this}
+cp4admin.ads_valid.validation_v1.data.VendorInformation.vendorName#phrase.action = set the vendor name of {this} to {vendor name}
+cp4admin.ads_valid.validation_v1.data.VendorInformation.vendorName#phrase.navigation = {vendor name} of {this}
+cp4admin.ads_valid.validation_v1.data.VendorInformation.vendorPhoneNumber#phrase.action = set the vendor phone number of {this} to {vendor phone number}
+cp4admin.ads_valid.validation_v1.data.VendorInformation.vendorPhoneNumber#phrase.navigation = {vendor phone number} of {this}
 
-# VendorOutput
-VendorOutput#concept.label = vendor output
-VendorOutput.VendorOutput(java.util.List,java.util.List)#phrase.navigation = a new {vendor output} where {0, msg} {1, output}
-VendorOutput.addTo_msgs(java.lang.String)#phrase.action = add {0} to the msgs of {this}
-VendorOutput.addTo_outputs(boolean)#phrase.action = add {0} to the outputs of {this}
-VendorOutput.clear_msgs()#phrase.action = clear the msgs of {this}
-VendorOutput.clear_outputs()#phrase.action = clear the outputs of {this}
-VendorOutput.msgs#phrase.action = set the msgs of {this} to {msg}
-VendorOutput.msgs#phrase.navigation = {msg} of {this}
-VendorOutput.outputs#phrase.action = set the outputs of {this} to {output}
-VendorOutput.outputs#phrase.navigation = {output} of {this}
-VendorOutput.removeFrom_msgs(java.lang.String)#phrase.action = remove {0} from the msgs of {this}
-VendorOutput.removeFrom_outputs(boolean)#phrase.action = remove {0} from the outputs of {this}
+# cp4admin.ads_valid.validation_v1.data.VendorOutput
+cp4admin.ads_valid.validation_v1.data.VendorOutput#concept.label = vendor output
+cp4admin.ads_valid.validation_v1.data.VendorOutput.VendorOutput(java.util.List,java.util.List)#phrase.navigation = a new {vendor output} where {0, msg} {1, output}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.addTo_msgs(java.lang.String)#phrase.action = add {0} to the msgs of {this}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.addTo_outputs(boolean)#phrase.action = add {0} to the outputs of {this}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.clear_msgs()#phrase.action = clear the msgs of {this}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.clear_outputs()#phrase.action = clear the outputs of {this}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.msgs#phrase.action = set the msgs of {this} to {msg}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.msgs#phrase.navigation = {msg} of {this}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.outputs#phrase.action = set the outputs of {this} to {output}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.outputs#phrase.navigation = {output} of {this}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.removeFrom_msgs(java.lang.String)#phrase.action = remove {0} from the msgs of {this}
+cp4admin.ads_valid.validation_v1.data.VendorOutput.removeFrom_outputs(boolean)#phrase.action = remove {0} from the outputs of {this}

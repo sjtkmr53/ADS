@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cp4admin.invoice_processor_business_logic.validation_v1</groupId>
+        <groupId>cp4admin.invoice_process.validation_v1</groupId>
         <artifactId>validation_V1</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>

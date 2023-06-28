@@ -1,3 +1,6 @@
 {
-  "itemtype": "createnotexist"
+  "operationId" : "8ef84b90-4827-45ef-8f92-d70adb60458e",
+  "body" : {
+    "itemtype" : "createnotexist"
+  }
 }

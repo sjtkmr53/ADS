@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cp4admin.invoice_processor_business_logic.uam_remediation_service</groupId>
+        <groupId>cp4admin.invoice_process.uam_remediation_service</groupId>
         <artifactId>UAMRemediationService</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
