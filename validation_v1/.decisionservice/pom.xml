@@ -86,6 +86,7 @@
             </build>
         </profile>
     </profiles>
+
 <build>
         <resources>
             <resource>
